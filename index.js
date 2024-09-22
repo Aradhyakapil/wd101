@@ -1,17 +1,10 @@
 const email = document.getElementById('email');
-
-
 const submit = document.getElementById('submit');
-
-
 const dobInput = document.getElementById('dob');
-
-
-
 let userForm = document.getElementById("user_form");
 
 const retrieveEntries = () => {
-  let entries = sessionStorage.getItem("user-entries");
+  let entries = localStorage.getItem("user-entries");
   if (entries) {
     entries = JSON.parse(entries);
   } else {
@@ -65,7 +58,7 @@ const saveUserForm = (event) => {
 
   if (acceptedTermsAndconditions) {
     userEntries.push(entry);
-    sessionStorage.setItem("user-entries", JSON.stringify(userEntries));
+    localStorage.setItem("user-entries", JSON.stringify(userEntries));
     displayEntries();
     userForm.reset()
   } else {

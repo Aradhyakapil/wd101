@@ -54,13 +54,6 @@ const saveUserForm = (event) => {
   const dob = document.getElementById("dob").value;
 
   const acceptedTermsAndconditions = document.getElementById("acceptTerms").checked;
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
-    }
-
-
 
   const entry = {
     name,

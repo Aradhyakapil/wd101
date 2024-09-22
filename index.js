@@ -69,6 +69,7 @@ const saveUserForm = (event) => {
     displayEntries();
   } else {
     alert("Please accept the terms and conditions.");
+    userForm.reset()
   }
 };
 

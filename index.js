@@ -67,9 +67,9 @@ const saveUserForm = (event) => {
     userEntries.push(entry);
     sessionStorage.setItem("user-entries", JSON.stringify(userEntries));
     displayEntries();
+    userForm.reset()
   } else {
     alert("Please accept the terms and conditions.");
-    userForm.reset()
   }
 };
 
